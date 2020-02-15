@@ -1,0 +1,12 @@
+{
+  "name": "app_cliente",
+  "version": "1.0.0",
+  "author": "Kenan",
+  "license": "MIT",
+  "dependencies": {
+    "angular": "^1.7.8",
+    "angular-route": "^1.7.8",
+    "angular-sanitize": "^1.7.8",
+    "bootstrap": "^4.3.1"
+  }
+}

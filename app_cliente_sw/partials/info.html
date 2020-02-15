@@ -1,0 +1,86 @@
+<title ng-show="titulo">{{titulo}}</title>
+<div class="progresso" ng-hide="aguarde()">
+    <p>Aguarde...</p>
+</div>
+<div class="row" style="margin-top: 2rem;" ng-hide="carregaInfo()">
+    <div class="col-md-3">
+        <div class="card" style="width: 18rem">
+            <img class="card-img-top" style="height: 15rem" src="../img/{{info.title}}.jpg" alt="{{info.title}}">
+            <div class="card-body">
+                <h5 class="card-title">{{info.title}}</h5>
+                <p>Diretor: {{info.director}}</p>
+                <p>Lançado em: {{info.release_date | date:"yyyy"}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-8" style="margin-left: 2rem">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Sinopse</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="text-align: justify">{{info.opening_crawl}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-md-3" style="margin-top: 1rem">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Planetas</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="p in planeta">
+                    <td>{{p.nome}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-md-3" style="margin-top: 1rem">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Personagens</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="a in personagem">
+                    <td>{{a.nome}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-md-3" style="margin-top: 1rem">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Naves Espaciais</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="n in nave">
+                    <td>{{n.nome}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-md-3" style="margin-top: 1rem">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Espécies</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="e in especie">
+                    <td>{{e.nome}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

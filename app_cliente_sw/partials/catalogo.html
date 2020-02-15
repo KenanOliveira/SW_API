@@ -1,0 +1,20 @@
+<title>Catálogo - Minha Busca</title>
+<div class="progresso" ng-hide="aguarde()">
+    <p>Aguarde...</p>
+</div>
+<div class="card-deck" style="margin-top: 2rem">
+    <div class="row">
+        <div class="col-md-4" style="margin-bottom: 25px;width: 13rem" ng-repeat="f in filmes">
+            <div class="card">
+                <a href="#!/info/{{f.url}}"><img class="card-img-top" src="../img/{{f.title}}.jpg" alt="Card image cap" style="height: 300px"></a>
+                <div class="card-body">
+                    <a href="#!/info/{{f.url}}"><h5 class="card-title">{{f.title}}</h5></a>
+                    <p>Diretor: {{f.director}}</p>
+                </div>
+                <div class="card-footer">
+                    <small>Lançado em {{f.release_date | date:"yyyy"}}</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
